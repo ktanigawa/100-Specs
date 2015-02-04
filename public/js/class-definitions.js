@@ -385,7 +385,15 @@ function browseURL (browser) {
  * @return {String}
  *
  */
-
+function listLivingOrgClass () {
+ var out = "";
+ for (var i = 0; i < livingOrganismClassification.length; i++) {
+  // out + the index means its stored in the = open string out
+    out += "<li>" + livingOrganismClassification[i] + "</li>";
+ }
+ console.log("<ul>"+out+"</ul>");
+ return "<ul>"+out+"</ul>";
+}
 
 /* Step 26
  *
