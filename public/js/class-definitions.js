@@ -309,7 +309,7 @@ function addNumbers (num1, num2) {
  *
  */
 function installLinux (linuxFlavorName) {
-  // loop over every letter
+  // loop over every linuxFlavors
   for (i = 0; i < linuxFlavors.length; i++) {
     // check if linuxFlavorName exists in array
     // access the current letter 
@@ -342,18 +342,19 @@ function installLinux (linuxFlavorName) {
 function drink (validBeer) {
   // check if the beer is valid 
   // return false if it is not valid
+  // bracket access (beers[validBeer])
   if (beers[validBeer] === undefined) {
     return false;
   }
   // check if the value is an Array
   if (beers[validBeer] instanceof Array) {  
+    // using array accessors [0]
     return "This " + validBeer + " is " + beers[validBeer][0] + " and " + beers[validBeer][1] + ".";
   } else {
     // is not an array, is probably a string
   return "This " + validBeer + " is " + beers[validBeer] + ".";
   }
 }
-
 /* Step 24
  *
  * Define a function named "browseURL" that takes
@@ -365,7 +366,15 @@ function drink (validBeer) {
  * @return {String}
  *
  */
-
+function browseURL (browser) {
+  // checks if browser is valid
+  if (browsers[browser] === undefined) {
+    return false;
+  } 
+  // bracket access for arrays and objects
+  // console.log(browsers[browser]); <-- the class-definitions
+  return browsers[browser];
+}
 
 /* Step 25
  *
