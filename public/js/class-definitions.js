@@ -391,7 +391,7 @@ function listLivingOrgClass () {
   // out + the index means its stored in the = open string out
     out += "<li>" + livingOrganismClassification[i] + "</li>";
  }
- console.log("<ul>"+out+"</ul>");
+ //console.log("<ul>"+out+"</ul>");
  return "<ul>"+out+"</ul>";
 }
 
@@ -415,6 +415,16 @@ function listLivingOrgClass () {
  *
  */
 
+function favoritePlanet (current) {
+  // if -1 means the current entered isn't in the planets array
+  if (planets.indexOf(current) === -1) {
+    return current + " is not a planet!";
+  } else {
+    // choses a random planet from the planets variable
+    var randomPlanet = Math.floor(Math.random()*planets.length);
+    return "I'm from " + current + ", but I wish I could go to " + planets[ randomPlanet ] + ".";
+  } 
+}
 
 /* Step 27
  *
@@ -438,7 +448,6 @@ function listLivingOrgClass () {
  *   earnMoney
  *
  */
-
 
 /* Step 28
  *
