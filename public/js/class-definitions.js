@@ -308,8 +308,20 @@ function addNumbers (num1, num2) {
  * @return {Bool}
  *
  */
+function installLinux (linuxFlavorName) {
+  // loop over every letter
+  for (i = 0; i < linuxFlavors.length; i++) {
+    // check if linuxFlavorName exists in array
+    // access the current letter 
+    if (linuxFlavors[i] === linuxFlavorName) {
+      return true;
+    } 
+    // compare against linuxFlavorName
 
-
+    // if its found return true
+  }
+  return false;
+}
 /* Step 23
  *
  * Define a function named "drink" that takes
@@ -327,7 +339,20 @@ function addNumbers (num1, num2) {
  * @return {Bool when False, String when True}
  *
  */
-
+function drink (validBeer) {
+  // check if the beer is valid 
+  // return false if it is not valid
+  if (beers[validBeer] === undefined) {
+    return false;
+  }
+  // check if the value is an Array
+  if (beers[validBeer] instanceof Array) {  
+    return "This " + validBeer + " is " + beers[validBeer][0] + " and " + beers[validBeer][1] + ".";
+  } else {
+    // is not an array, is probably a string
+  return "This " + validBeer + " is " + beers[validBeer] + ".";
+  }
+}
 
 /* Step 24
  *
