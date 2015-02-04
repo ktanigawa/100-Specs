@@ -448,7 +448,32 @@ function favoritePlanet (current) {
  *   earnMoney
  *
  */
+function Person (name, money, age, gender) {
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
+  // this.spendMoney = true;
+  // this.earnMoney = true;
+}
 
+Person.prototype.spendMoney = function(money) {
+if (this.money >= money) {
+    this.money = this.money - money;
+    return true;
+  } else {
+    return false;
+  }
+};
+
+Person.prototype.earnMoney = function(money) {
+if (this.money >= money) {
+    this.money = this.money + money;
+    return true;
+  } else {
+    return false;
+  }  
+};
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
