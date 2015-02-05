@@ -592,7 +592,23 @@ Garden.prototype.grow = function (){
  *   removePlanet
  *
  */
+function SolarSystem (planets) {
+  this.planets = [];
+  addPlanet = true;
+  removePlanet = true;
+}
 
+SolarSystem.prototype.addPlanet = function() {
+  for (i = 0; i < this.planets.length; i++) {
+    this.planets.push(i);
+  }
+};
+
+SolarSystem.prototype.removePlanet = function() {
+  for (i = 0; i < this.planets.length; i++) {
+    this.planets.splice(i,1);
+  }
+};
 
 /* Step 33
  *
