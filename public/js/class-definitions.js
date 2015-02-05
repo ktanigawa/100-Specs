@@ -533,8 +533,14 @@ function canTalkAbout (club) {
  *   write
  *
  */
+function Pen (color) {
+  this.color = color;
+}
 
-
+Pen.prototype.write = function (message) {
+  console.log(this.color + ": " + message);
+  return(this.color + ": " + message);
+};
 /* Step 31
  *
  * Define a class named "Garden" with a property for
