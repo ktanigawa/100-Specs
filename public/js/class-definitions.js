@@ -1,4 +1,5 @@
-/* Step 1
+/*  https://github.com/devleague/100-Specs/network/members
+ *  Step 1
  *
  * Declare a variable named "unicorn"
  *
@@ -562,21 +563,17 @@ Pen.prototype.write = function (message) {
  *   grow
  * 
  */
-function Garden (plantsTotal) {
+function Garden (plantsTotal, isWatered){
   this.plantsTotal = plantsTotal;
   this.isWatered = false;
 }
 
-Garden.prototype.water = function() {
-  // sets the recently watered property to true
-  if(!this.isWatered) {
-    this.isWatered = true;
-    this.grow();
-  }
+Garden.prototype.water = function(){
+  this.isWatered = true;
 };
 
-Garden.prototype.grow = function() {
-    this.plantsTotal++;
+Garden.prototype.grow = function (){
+  this.plantsTotal += 1;
 };
 
 /* Step 32
