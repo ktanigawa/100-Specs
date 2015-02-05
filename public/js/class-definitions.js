@@ -485,7 +485,20 @@ if (this.money >= money) {
  * @return {Number}
  *
  */
-
+function purchaseLaptop (laptop) {
+  // if ()
+  if (laptopCosts[laptop] !== undefined) {
+    // return the costs of the laptop
+    console.log(laptopCosts[laptop]);
+    return laptopCosts[laptop];
+  } else {
+    return -1;
+  }
+  // // if -1 return something
+  // if (laptopCosts.indexOf(laptop) === -1) {
+  //   return false;
+  // } 
+}
 
 /* Step 29
  *
