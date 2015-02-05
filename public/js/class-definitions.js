@@ -209,10 +209,10 @@ var DNA = ["nucleatides", "guanine", "adenine", "thymine", "cytosine"];
  *
  */
 var laptopCosts = {
-  MacBook: 1500,
-  Alienware: 2500,
-  HP: 499,
-  Surface: 320
+  MacBook: "1500",
+  Alienware: "2500",
+  HP: "499",
+  Surface: "320"
 };
 
 /* Step 17
@@ -486,18 +486,13 @@ if (this.money >= money) {
  *
  */
 function purchaseLaptop (laptop) {
-  // if ()
+  // if is is defined
   if (laptopCosts[laptop] !== undefined) {
     // return the costs of the laptop
     console.log(laptopCosts[laptop]);
     return laptopCosts[laptop];
-  } else {
-    return -1;
   }
-  // // if -1 return something
-  // if (laptopCosts.indexOf(laptop) === -1) {
-  //   return false;
-  // } 
+  return -1;
 }
 
 /* Step 29
@@ -511,6 +506,10 @@ function purchaseLaptop (laptop) {
  * @return {Bool}
  *
  */
+function canTalkAbout (club) {
+
+}
+
 
 
 /* Step 30
