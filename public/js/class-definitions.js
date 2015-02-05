@@ -489,7 +489,6 @@ function purchaseLaptop (laptop) {
   // if is is defined
   if (laptopCosts[laptop] !== undefined) {
     // return the costs of the laptop
-    console.log(laptopCosts[laptop]);
     return laptopCosts[laptop];
   }
   return -1;
@@ -507,7 +506,7 @@ function purchaseLaptop (laptop) {
  *
  */
 function canTalkAbout (club) {
-
+  return club !== club_name;
 }
 
 
