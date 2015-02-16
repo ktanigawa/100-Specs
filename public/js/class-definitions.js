@@ -1141,6 +1141,15 @@ var dinner;
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
+var junkFood = ["chips", "soda", "ice cream", "popcorn", "candy"];
+
+
+
+// .filter 
+// .map 
+
+
+
 
 
  /* Steps 91 to 100
