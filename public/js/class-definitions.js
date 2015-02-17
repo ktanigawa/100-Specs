@@ -210,10 +210,10 @@ var DNA = ["nucleatides", "guanine", "adenine", "thymine", "cytosine"];
  *
  */
 var laptopCosts = {
-  MacBook: "1500",
-  Alienware: "2500",
-  HP: "499",
-  Surface: "320"
+  MacBook: 1500,
+  Alienware: 2500,
+  HP: 499,
+  Surface: 320
 };
 
 /* Step 17
@@ -537,7 +537,6 @@ function Pen (color) {
 }
 
 Pen.prototype.write = function (message) {
-  console.log(this.color + ": " + message);
   return(this.color + ": " + message);
 };
 /* Step 31
@@ -605,8 +604,8 @@ SolarSystem.prototype.addPlanet = function() {
   for (i = 0; i < this.planets.length; i++) {
     this.planets.push(i);
   }
+  this.planets.push("NewPlanet");
 };
-
 SolarSystem.prototype.removePlanet = function() {
   for (i = 0; i < this.planets.length; i++) {
     this.planets.splice(i,1);
@@ -645,7 +644,30 @@ SolarSystem.prototype.removePlanet = function() {
  *   marries
  *
  */
+function PrincessLeia () {
+  // instanceof Person
+  name = this.name;
+  money = this.money;
+  age = this.age;
+  gender = this.gender;
+  isInTrouble = null;
+}
 
+PrincessLeia.prototype.shootsGun = function(){
+  isInTrouble = false;
+  return("Leia shoots her gun wildly");
+};
+
+PrincessLeia.prototype.getsInTrouble = function(){
+  isInTrouble = true;
+  return ("Help me Obi-wan Kenobi, you're my only hope");
+};
+
+PrincessLeia.prototype.marries = function(){
+  if ("Han Solo"){
+    return true;
+  } return ("Gross!");
+};
 
 /* Step 34
  *
